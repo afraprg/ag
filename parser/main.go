@@ -3,8 +3,10 @@ package parser
 import (
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
-	"log"
+	"strings"
 )
+
+var ConfigFile string
 
 type Cmd struct {
 	Name        string   `yaml:"name"`
@@ -20,15 +22,38 @@ type Flag struct {
 	Default     string `yaml:"default"`
 }
 
-func Parse(configFile string) (cmds []Cmd) {
-	f, err := ioutil.ReadFile(configFile)
+func parse() ([]Cmd, error) {
+	f, err := ioutil.ReadFile(ConfigFile)
 	if err != nil {
-		log.Fatalln("config file not found!")
+		return nil, err
 	}
-	err = yaml.Unmarshal(f, &cmds)
+	var CMDs []Cmd
+	err = yaml.Unmarshal(f, &CMDs)
 	if err != nil {
-		log.Fatalln(err.Error())
+		return nil, err
 	}
 
-	return
+	return CMDs, nil
+}
+
+func Find(name string, params map[string]string) (Cmd, error) {
+	CMDs, err := parse()
+	if err != nil {
+		return Cmd{}, err
+	}
+	var cmd Cmd
+	for _, c := range CMDs {
+		if c.Name == name {
+			cmd = c
+			break
+		}
+	}
+
+	for pk, pv := range params {
+		for i, c2 := range cmd.CMDs {
+			cmd.CMDs[i] = strings.Replace(c2, pk, pv, 1)
+		}
+	}
+
+	return cmd, err
 }

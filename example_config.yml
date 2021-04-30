@@ -17,4 +17,9 @@
 - name: test_2
   cmds:
     - echo "hello world"
-    - exit
+    - mkdir test
+    - cd test
+    - mkdir test2
+    - cd test2
+    - touch main.txt
+    - echo "Hi!" > main.txt
