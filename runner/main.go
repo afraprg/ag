@@ -8,10 +8,10 @@ import (
 	"os/exec"
 )
 
-func Run(name string, params map[string]string) (bool, error) {
+func Run(name string, params map[string]string) error {
 	cmd, err := parser.Find(name, params)
 	if err != nil {
-		return false, err
+		return err
 	}
 
 	filename := generator.GenerateShFile(cmd.CMDs)
@@ -21,5 +21,5 @@ func Run(name string, params map[string]string) (bool, error) {
 	}
 	defer os.Remove(filename)
 
-	return true, nil
+	return nil
 }

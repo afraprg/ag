@@ -1,8 +1,10 @@
 package parser
 
 import (
+	"fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
+	"log"
 	"strings"
 )
 
@@ -49,11 +51,28 @@ func Find(name string, params map[string]string) (Cmd, error) {
 		}
 	}
 
-	for pk, pv := range params {
-		for i, c2 := range cmd.CMDs {
-			cmd.CMDs[i] = strings.Replace(c2, pk, pv, 1)
+	for n, flag := range cmd.flags() {
+		if _, found := params[n]; found {
+			for i, c2 := range cmd.CMDs {
+				cmd.CMDs[i] = strings.Replace(c2, fmt.Sprintf("${%s}", n), params[n], 1)
+			}
+		} else if flag.Default != "" {
+			for i, c2 := range cmd.CMDs {
+				cmd.CMDs[i] = strings.Replace(c2, fmt.Sprintf("${%s}", n), flag.Default, 1)
+			}
+		} else if flag.Optional == false {
+			log.Fatalf("Please enter %s", flag.Name)
 		}
 	}
 
 	return cmd, err
+}
+
+func (c *Cmd) flags() map[string]Flag {
+	result := make(map[string]Flag)
+	for _, f := range c.Flags {
+		result[f.Name] = f
+	}
+
+	return result
 }

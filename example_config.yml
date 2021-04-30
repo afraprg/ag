@@ -8,12 +8,15 @@
     - name: pt
       description: location
       optional: true
-      default: "/Users/mostafahosseini/go/src/ga"
+      default: "/Users/mostafahosseini/go/src/"
   cmds:
     - cd ${pt}
     - mkdir ${pn}
+    - cd ${pn}
     - git init
-    - goland .
+    - touch main.go
+    - git add .
+    - code .
 - name: test_2
   cmds:
     - echo "hello world"
