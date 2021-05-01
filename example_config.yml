@@ -1,0 +1,28 @@
+- name: glcp
+  description: with this command you can create a goland project
+  flags:
+    - name: pn
+      description: project name
+      optional: false
+      default: project 1
+    - name: pt
+      description: location
+      optional: true
+      default: "/Users/mostafahosseini/go/src/"
+  cmds:
+    - cd ${pt}
+    - mkdir ${pn}
+    - cd ${pn}
+    - git init
+    - touch main.go
+    - git add .
+    - code .
+- name: test_2
+  cmds:
+    - echo "hello world"
+    - mkdir test
+    - cd test
+    - mkdir test2
+    - cd test2
+    - touch main.txt
+    - echo "Hi!" > main.txt
