@@ -16,7 +16,7 @@
     - git init
     - touch main.go
     - git add .
-    - code .
+    - goland .
 - name: test_2
   cmds:
     - echo "hello world"
