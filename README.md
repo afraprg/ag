@@ -1,14 +1,18 @@
-# Introduction
+# GA
+
+//todo
+
+## Introduction
 
 **ag** is a command line tool that similar to **Makefile**. with ag you can make an alias for groups of command with custom flags.
 
 This tool is developed with golang.
 
-# Installation
+## Installation
 
 //todo
 
-# Config
+## Config
 for the first step you have to create a config file, In the file below I have created an example of a config, you can create a file with your custom config.
 ```yaml
 - name: glcp
@@ -43,7 +47,7 @@ also, I created [an example file](https://github.com/afraprg/ag/blob/main/exampl
 
 
 
-# Build from source
+## Build from source
 
     go build .
     mv ag /usr/local/bin/ag
