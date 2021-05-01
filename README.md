@@ -46,4 +46,5 @@ also, I created [an example file](https://github.com/afraprg/ag/blob/main/exampl
 # Build from source
 
     go build .
+    mv ag /usr/local/bin/ag
 
