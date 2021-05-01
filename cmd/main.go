@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"ga/parser"
+	"ag/parser"
 	"io"
 	"log"
 	"os"

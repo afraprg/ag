@@ -1,9 +1,9 @@
 package main
 
 import (
-	"ga/cmd"
-	"ga/input"
-	"ga/runner"
+	"ag/cmd"
+	"ag/input"
+	"ag/runner"
 	"log"
 )
 

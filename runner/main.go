@@ -1,8 +1,8 @@
 package runner
 
 import (
-	"ga/generator"
-	"ga/parser"
+	"ag/generator"
+	"ag/parser"
 	"log"
 	"os"
 	"os/exec"
