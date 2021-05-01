@@ -12,6 +12,12 @@ This tool is developed with golang.
 
 //todo
 
+
+### Build from source
+
+    go build .
+    mv ag /usr/local/bin/ag
+
 ## Config
 for the first step you have to create a config file, In the file below I have created an example of a config, you can create a file with your custom config.
 ```yaml
@@ -45,10 +51,4 @@ after run init command with that config you can create a new golang project and 
 
 also, I created [an example file](https://github.com/afraprg/ag/blob/main/example_config.yml "an example file") in this repository.
 
-
-
-## Build from source
-
-    go build .
-    mv ag /usr/local/bin/ag
 
