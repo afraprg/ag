@@ -19,6 +19,7 @@
     - goland .
 - name: test_2
   cmds:
+    - cd /root
     - echo "hello world"
     - mkdir test
     - cd test

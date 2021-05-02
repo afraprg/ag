@@ -20,11 +20,11 @@ func Init() {
 	if os.Args[1] == "init" && len(os.Args) == 2 {
 		os.Exit(0)
 	} else if os.Args[1] == "init" && os.Args[2] != "" {
-		copyConfig(os.Args[2], dirname+"/.ga.yaml")
+		copyConfig(os.Args[2], dirname+"/.ag.yaml")
 		os.Exit(0)
 	}
 
-	parser.ConfigFile = dirname + "/.ga.yaml"
+	parser.ConfigFile = dirname + "/.ag.yaml"
 }
 
 func copyConfig(src, dst string) error {
