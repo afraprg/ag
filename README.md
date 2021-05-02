@@ -48,9 +48,11 @@ after create the config file you must run the following command:
 
        $ ag init your_config.yaml
 
+## Run
+
 after run init command with that config you can create a new golang project and finaly open in goland with this command:
 
-    ag glcp --pn=example_project --pt=/users/mostafahosseini/go/src/example_project
+       $ ag glcp --pn=example_project --pt=/users/mostafahosseini/go/src/example_project
 
 also, I created [an example file](https://github.com/afraprg/ag/blob/main/.docker/.ag.yaml "an example file") in this repository.
 
