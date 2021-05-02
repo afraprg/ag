@@ -52,6 +52,6 @@ after run init command with that config you can create a new golang project and 
 
     ag glcp --pn=example_project --pt=/users/mostafahosseini/go/src/example_project
 
-also, I created [an example file](https://github.com/afraprg/ag/blob/main/.docker/.ag.yml "an example file") in this repository.
+also, I created [an example file](https://github.com/afraprg/ag/blob/main/.docker/.ag.yaml "an example file") in this repository.
 
 
