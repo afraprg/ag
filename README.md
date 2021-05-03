@@ -14,7 +14,10 @@ This tool is developed with golang.
 
 ### Docker
 
+In _<your_config_path>_ you must create a **.ag.yaml** file
+
     docker pull mostafahosseinime/ag
+    docker run -v <your_config_path>:/root -it mostafahosseinime/ag:latest <your_command>
 
 ### Build from source
 
