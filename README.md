@@ -1,6 +1,6 @@
 # AG
 
-//todo
+![GO Version](https://img.shields.io/github/go-mod/go-version/afraprg/ag?style=for-the-badge) ![TAG](https://img.shields.io/github/v/tag/afraprg/ag?style=for-the-badge)
 
 ## Introduction
 
@@ -10,7 +10,7 @@ This tool is developed with golang.
 
 ## Installation
 
-//todo
+You can download the latest version on the [Release page](https://github.com/afraprg/ag/releases), after download you must move the binary file to **/usr/local/bin/ag** .
 
 ### Docker
 
