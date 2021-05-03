@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**ag** is a command line tool that similar to **Makefile**. with ag you can make an alias for groups of command with custom flags.
+**ag** is a command line tool that similar to **Makefile**. with ag you can make an alias for group of commands with custom flags.
 
 This tool is developed with golang.
 
