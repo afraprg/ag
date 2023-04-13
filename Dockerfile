@@ -1,4 +1,4 @@
-FROM golang:1.19.6-buster
+FROM golang:1.20.3-buster
 
 WORKDIR $GOPATH/src/github.com/afraprg/ag
 COPY . .
